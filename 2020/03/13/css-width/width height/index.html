@@ -15,10 +15,10 @@
 <meta property="og:description" content="width与heightwidth: auto​    (一) 作用 ​    1.充分利用可用空间  1&lt;div style&#x3D;&quot;width: auto; height:20px; border: 1px solid black;&quot;&gt;&lt;&#x2F;div&gt;  ​    2.收缩与包裹（浮动、绝对定位）–&gt;fit-content ​    3.收缩到最小。table-layout">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:/Users/yc/Pictures/Camera%20Roll/盒模型.png">
-<meta property="og:image" content="e:/Typora/新建文件夹/效果图1.png">
-<meta property="og:image" content="e:/Typora/新建文件夹/效果图2.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/width%20height/picture/%E6%95%88%E6%9E%9C%E5%9B%BE1.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/width%20height/picture/%E6%95%88%E6%9E%9C%E5%9B%BE2.png">
 <meta property="article:published_time" content="2020-03-13T11:30:10.477Z">
-<meta property="article:modified_time" content="2020-03-13T11:23:29.109Z">
+<meta property="article:modified_time" content="2020-03-13T11:49:07.896Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/yc/Pictures/Camera%20Roll/盒模型.png">
@@ -120,29 +120,22 @@
 
 <p>因此，百分比高度想要起作用，其父集必须有一个可以生效的高度值</p>
 <p>==如何支持==</p>
-<ol>
-<li><p>设定显示的高度值</p>
-<p>​    </p>
+<p>1.设定显示的高度值</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>,<span class="selector-tag">body</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-</li>
-</ol>
-<ol start="2">
-<li><p>使用绝对定位</p>
+<p>2.使用绝对定位</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;	<span class="comment">/*绝对定位元素的宽高百分比计算是相对于padding box，非绝对定位的宽高百分比计算是相对于content box*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>​    差别如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;	<span class="comment">/*非绝对定位的宽高百分比计算是相对于content box*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<img src="./picture/效果图1.png" style="zoom:50%;" />
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute; <span class="comment">/*绝对定位元素的宽高百分比计算是相对于padding box*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="./picture/效果图2.png" style="zoom:50%;" />
 
 
-</li>
-</ol>
-<pre><code><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute; <span class="comment">/*绝对定位元素的宽高百分比计算是相对于padding box*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><img src="E:\Typora\新建文件夹\效果图1.png" style="zoom:50%; float: left" />
-
-<img src="E:\Typora\新建文件夹\效果图2.png" style="zoom:50%; margin-top: -320px; " />
 
 <hr>
 
@@ -152,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7q3yk8j0002mktveddy4t3x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7q4c7v10001ywtv8u4xa9op" class="article-share-link">Share</a>
       
       
     </footer>
