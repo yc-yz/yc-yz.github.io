@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="width与heightwidth: auto​    (一) 作用 ​    1.充分利用可用空间  1&lt;div style&#x3D;&quot;width: auto; height:20px; border: 1px solid black;&quot;&gt;&lt;&#x2F;div&gt;  ​    2.收缩与包裹（浮动、绝对定位）–&gt;fit-content ​    3.收缩到最小。table-layout">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:/Users/yc/Pictures/Camera%20Roll/盒模型.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/width%20height/picture/%E6%95%88%E6%9E%9C%E5%9B%BE1.png">
-<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/width%20height/picture/%E6%95%88%E6%9E%9C%E5%9B%BE2.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/source/images/%E7%9B%92%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/source/images/%E6%95%88%E6%9E%9C%E5%9B%BE1.png">
+<meta property="og:image" content="http://yoursite.com/2020/03/13/css-width/source/images/%E6%95%88%E6%9E%9C%E5%9B%BE2.png">
 <meta property="article:published_time" content="2020-03-13T11:30:10.477Z">
-<meta property="article:modified_time" content="2020-03-13T11:49:07.896Z">
+<meta property="article:modified_time" content="2020-03-14T05:31:25.885Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:/Users/yc/Pictures/Camera%20Roll/盒模型.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/13/css-width/source/images/%E7%9B%92%E6%A8%A1%E5%9E%8B.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -113,7 +113,7 @@
 <h3 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h3><p>支持content-box和border-box，不支持margin-box</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    width: 100px;	//盒子宽度为100像素</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    width: 100px;	//content宽度为100px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="C:\Users\yc\Pictures\Camera Roll\盒模型.png" style="zoom:33%;" />
+<img src="../source/images/盒模型.png" style="zoom:33%;" />
 
 <h2 id="height-100"><a href="#height-100" class="headerlink" title="height: 100%"></a>height: 100%</h2><p>对于width属性，当width为auto时，百分比值适用；而对于height属性，当<font color="red">父元素</font>的height为auto，只要子元素在文档流中，其百分值就被忽略</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;  <span class="comment">/*多余*/</span></span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;	<span class="comment">/*无效*/</span></span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(bg.jpg);</span><br><span class="line">&#125;	<span class="comment">/*div的高度永远为0*/</span></span><br></pre></td></tr></table></figure>
@@ -129,15 +129,16 @@
 <p>​    差别如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;	<span class="comment">/*非绝对定位的宽高百分比计算是相对于content box*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="./picture/效果图1.png" style="zoom:50%;" />
+<img src="../source/images/效果图1.png" style="zoom:50%;" />
 
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute; <span class="comment">/*绝对定位元素的宽高百分比计算是相对于padding box*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="./picture/效果图2.png" style="zoom:50%;" />
+<img src="../source/images/效果图2.png" style="zoom:50%;" />
 
 
 
 <hr>
+
 
 <h1 id="相关题目："><a href="#相关题目：" class="headerlink" title="相关题目："></a>相关题目：</h1><p><strong>box-sizing属性？</strong></p>
 <p>用来控制元素的盒子模型的解析模式，默认为content-box<br>context-box：W3C的标准盒子模型，设置元素的 height/width 属性指的是content部分的高/宽<br>border-box：IE传统盒子模型。设置元素的height/width属性指的是border + padding + content部分的高/宽</p>
@@ -145,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r5k2m40001r8tvdb0y0w6s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r6bzxo0002d8tvents4ud0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,6 +154,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/03/14/%E6%9C%AA%E5%91%BD%E5%90%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          未命名
+        
+      </div>
+    </a>
   
   
     <a href="/2020/02/16/todolist/todolist/" id="article-nav-older" class="article-nav-link-wrap">
@@ -192,6 +202,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/14/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a>
+          </li>
         
           <li>
             <a href="/2020/03/13/css-width/width%20height/">css-width/width height</a>
