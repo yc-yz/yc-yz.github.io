@@ -64,43 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-未命名" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/14/%E6%9C%AA%E5%91%BD%E5%90%8D/" class="article-date">
-  <time datetime="2020-03-14T05:29:32.160Z" itemprop="datePublished">2020-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/14/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="E:%5Cmyblog%5Cmyblog%5Csource%5Cimages%5C%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8.jpg" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/14/%E6%9C%AA%E5%91%BD%E5%90%8D/" data-id="ck7r6bzx70001d8tvayfe74bz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-css-width/width height" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/13/css-width/width%20height/" class="article-date">
@@ -144,8 +107,7 @@
 <h3 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h3><p>支持content-box和border-box，不支持margin-box</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    width: 100px;	//盒子宽度为100像素</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    width: 100px;	//content宽度为100px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="../source/images/盒模型.png" style="zoom:33%;" />
-
+<p><img src="/images/%E6%95%88%E6%9E%9C%E5%9B%BE1.png" alt=""></p>
 <h2 id="height-100"><a href="#height-100" class="headerlink" title="height: 100%"></a>height: 100%</h2><p>对于width属性，当width为auto时，百分比值适用；而对于height属性，当<font color="red">父元素</font>的height为auto，只要子元素在文档流中，其百分值就被忽略</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;  <span class="comment">/*多余*/</span></span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;	<span class="comment">/*无效*/</span></span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(bg.jpg);</span><br><span class="line">&#125;	<span class="comment">/*div的高度永远为0*/</span></span><br></pre></td></tr></table></figure>
 
@@ -160,8 +122,7 @@
 <p>​    差别如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;	<span class="comment">/*非绝对定位的宽高百分比计算是相对于content box*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="../source/images/效果图1.png" style="zoom:50%;" />
-
+<p><img src="../source/images/%E6%95%88%E6%9E%9C%E5%9B%BE1.png" alt=""></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute; <span class="comment">/*绝对定位元素的宽高百分比计算是相对于padding box*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <img src="../source/images/效果图2.png" style="zoom:50%;" />
@@ -177,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r6bzxo0002d8tvents4ud0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r6mfmz0001l4tv1gn9d02p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -515,7 +476,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/16/todolist/todolist/" data-id="ck7r6bzxq0003d8tvbxse0yc5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/16/todolist/todolist/" data-id="ck7r6mfn50002l4tv7yjb59h0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -564,7 +525,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ck7r6bzwz0000d8tv74r61dmx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ck7r6mfm40000l4tv7wwwdj1h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -603,10 +564,6 @@ document.getElementById("add_list").onkeypress = function (envent) {
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/03/14/%E6%9C%AA%E5%91%BD%E5%90%8D/">未命名</a>
-          </li>
         
           <li>
             <a href="/2020/03/13/css-width/width%20height/">css-width/width height</a>
