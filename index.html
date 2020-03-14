@@ -107,7 +107,8 @@
 <h3 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h3><p>支持content-box和border-box，不支持margin-box</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    width: 100px;	//盒子宽度为100像素</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">	<span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    width: 100px;	//content宽度为100px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%95%88%E6%9E%9C%E5%9B%BE1.png" alt=""></p>
+<img src="/images/盒模型.png" style="zoom:50%;" />
+
 <h2 id="height-100"><a href="#height-100" class="headerlink" title="height: 100%"></a>height: 100%</h2><p>对于width属性，当width为auto时，百分比值适用；而对于height属性，当<font color="red">父元素</font>的height为auto，只要子元素在文档流中，其百分值就被忽略</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;  <span class="comment">/*多余*/</span></span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;	<span class="comment">/*无效*/</span></span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(bg.jpg);</span><br><span class="line">&#125;	<span class="comment">/*div的高度永远为0*/</span></span><br></pre></td></tr></table></figure>
 
@@ -122,10 +123,11 @@
 <p>​    差别如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;	<span class="comment">/*非绝对定位的宽高百分比计算是相对于content box*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="../source/images/%E6%95%88%E6%9E%9C%E5%9B%BE1.png" alt=""></p>
+<img src="/images/效果图1-1584165027885.png" style="zoom:50%;" />
+
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">28</span>, <span class="number">172</span>, <span class="number">141</span>);</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">160px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute; <span class="comment">/*绝对定位元素的宽高百分比计算是相对于padding box*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: darkorchid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="../source/images/效果图2.png" style="zoom:50%;" />
+<img src="/images/效果图2.png" style="zoom:50%;" />
 
 
 
@@ -138,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r6trmr0001dgtv86zkcbmp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r6zuq60001a0tvcr7i69f7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -476,7 +478,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/16/todolist/todolist/" data-id="ck7r6trmy0002dgtvgo3x9soe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/16/todolist/todolist/" data-id="ck7r6zuq80002a0tvei3pho9a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -525,7 +527,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ck7r6trlw0000dgtv9kgg2mf3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ck7r6zuph0000a0tv7f05db6j" class="article-share-link">Share</a>
       
       
     </footer>
