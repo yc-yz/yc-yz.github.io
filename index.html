@@ -64,6 +64,90 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-css/盒模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/06/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2020-06-06T09:42:04.315Z" itemprop="datePublished">2020-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/06/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/">css/盒模型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>W3C标准盒：属性width，height只包含content，不包含border和padding</p>
+<p>IE盒:属性width，height包含content，border和padding</p>
+<img src="../../../myblog/myblog/source/images/盒模型1.png" style="zoom:50%;" /> 
+
+<p><strong>content-box（标准盒模型）</strong></p>
+<p>width = 内容的宽度</p>
+<p>height = 内容的高度</p>
+<p><strong>border-box（IE盒模型）</strong></p>
+<p>width = border + padding + 内容的宽度</p>
+<p>height = border + padding + 内容的高度</p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#999</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420224144492.png" alt="image-20200420224144492" style="zoom:50%;" />
+这个盒子的大小很明显是：宽：100px 高：100px。
+
+<p>再来几个</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#999</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420225039027.png" alt="image-20200420225039027" style="zoom:50%; float:left;" />
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#999</span>;		</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    	盒子宽： 100 + 2 + 40 = 142</span></span><br><span class="line"><span class="comment">        盒子高： 100 + 2 + 40 = 142</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420225453016.png" alt="image-20200420225453016" style="zoom:50%;float:left;" />
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#999</span>;		</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    	盒子宽： 100 + 2 = 102</span></span><br><span class="line"><span class="comment">        盒子高： 100 + 2 = 102</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420225810463.png" alt="image-20200420225810463" style="zoom:50%;float:left;" />
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#999</span>;		</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    	盒子宽： 100 + 2 = 102</span></span><br><span class="line"><span class="comment">        盒子高： 100 + 2 = 102</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420230104228.png" alt="image-20200420230104228" style="zoom:50%;float:left;" />
+
+<p>==总结==：盒子大小 = content + padding + border</p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="margin的合并和塌陷"><a href="#margin的合并和塌陷" class="headerlink" title="margin的合并和塌陷"></a>margin的合并和塌陷</h3><h4 id="合并："><a href="#合并：" class="headerlink" title="合并："></a>合并：</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.top</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#999</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bottom</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#999</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420232007984.png" alt="image-20200420232007984" style="zoom:50%;float:left;" />
+
+<p>很明显，垂直结构的两个盒子之间是100px,而不是我们预想的200px.</p>
+<p>这里便发生了<strong>margin的合并</strong>：兄弟结构<strong>垂直方向</strong>上面的margin会合并，并且<strong>取到的是较大的一个</strong>，一般情况下，margin合并我们可以不处理，合理安排垂直方向的margin就能达到需求效果。水平方向上并不会发生</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.top</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#999</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bottom</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#999</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*取margin值大的，即150px*/</span></span><br></pre></td></tr></table></figure>
+
+<img src="../../../myblog/myblog/source/images/image-20200420232656909.png" alt="image-20200420232656909" style="zoom:50%;float:left;" />
+
+<h4 id="塌陷："><a href="#塌陷：" class="headerlink" title="塌陷："></a>塌陷：</h4><p>margin塌陷：父子结构的元素，垂直方向上的margin，会取最大那个</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/06/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/" data-id="ckb3g8acs00039ctvasw7btqg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-css_居中方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" class="article-date">
@@ -163,44 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" data-id="ckb3g1e6600012ktvbf25dwu4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-css/盒模型" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="article-date">
-  <time datetime="2020-03-14T05:54:43.020Z" itemprop="datePublished">2020-03-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/">css/盒模型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p>以标准盒为例</p>
-<img src="../../images/标准盒模型1.jpg" style="zoom:50%;" />
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/" data-id="ckb3g1e6n00022ktv2lfn3axy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" data-id="ckb3g8ac200009ctv7bfzh7zf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -286,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/13/css/width%20height/" data-id="ckb3g1e6o00032ktv1fcubvbi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/13/css/width%20height/" data-id="ckb3g8acr00029ctvdjfqbgye" class="article-share-link">Share</a>
       
       
     </footer>
@@ -335,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ckb3g1e5z00002ktvdiut4msv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ckb3g8ac800019ctv08fqgylp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -376,11 +423,11 @@
       <ul>
         
           <li>
-            <a href="/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/">css_居中方式</a>
+            <a href="/2020/06/06/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/">css/盒模型</a>
           </li>
         
           <li>
-            <a href="/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/">css/盒模型</a>
+            <a href="/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/">css_居中方式</a>
           </li>
         
           <li>
