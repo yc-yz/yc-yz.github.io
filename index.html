@@ -64,9 +64,155 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-css-width/width height" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-css_居中方式" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/13/css-width/width%20height/" class="article-date">
+    <a href="/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" class="article-date">
+  <time datetime="2020-06-06T09:21:17.409Z" itemprop="datePublished">2020-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/">css_居中方式</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="·-水平居中"><a href="#·-水平居中" class="headerlink" title="· 水平居中"></a>· 水平居中</h1><ol>
+<li><p>行内元素：其父元素设置<code>text-align:center</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>行内元素水平居中<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.line1</span> &#123;</span><br><span class="line">      <span class="attribute">text-align</span>: center;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">      <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="../../myblog/myblog/source/images/image-20200606162732351.png" alt="image-20200606162732351"></p>
+</li>
+<li><p>块级元素：给该元素设置<code>margin: 0 auto;</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block2"</span>&gt;</span>111<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block1</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-class">.block2</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">      <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">      <span class="attribute">background-color</span>: blueviolet;</span><br><span class="line">      <span class="attribute">text-align</span>: center;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="../../myblog/myblog/source/images/image-20200606163207450.png" alt="image-20200606163207450"></p>
+</li>
+</ol>
+<ol start="3">
+<li><p>flex布局 </p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block1</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.block2</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: blueviolet;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><img src="../../myblog/myblog/source/images/image-20200606164504143.png" alt="image-20200606164504143"></p>
+<ol start="4">
+<li><p>宽度固定时，子元素设置：absolute + margin-left</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block1</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.block2</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">      <span class="attribute">margin-left</span>: -<span class="number">50px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: blueviolet;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="5">
+<li><p>css3中的transform</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block1</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.block2</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="attribute">background-color</span>: blueviolet;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="../../myblog/myblog/source/images/image-20200606165528455.png" alt="image-20200606165528455" style="zoom: 50%;" />
+
+</li>
+</ol>
+<h1 id="·-垂直居中"><a href="#·-垂直居中" class="headerlink" title="· 垂直居中"></a>· 垂直居中</h1><ol>
+<li><p>单行文本：line-hieght = 父元素高度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">p</span>&gt;</span>单行文本垂直居中<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block1</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#FFBA10</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">p</span> &#123;</span><br><span class="line">      <span class="attribute">line-height</span>: <span class="number">60px</span>;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="../../myblog/myblog/source/images/image-20200606165855934.png" alt="image-20200606165855934"></p>
+</li>
+</ol>
+<ol start="2">
+<li><p>高度固定：父元素设置relative，子元素</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">hieght</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">20px</span>;</span><br><span class="line">   <span class="comment">/*margin-top的值为负的子元素高度的一半*/</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>高度不定：vertical-align，前提是设置父元素display:table</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="../../myblog/myblog/source/images/image-20200606170935903.png" alt="image-20200606170935903"></p>
+</li>
+<li><p>flex布局</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block1"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"block2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.block1</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#FFBA10</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.block2</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">      <span class="attribute">background-color</span>: aquamarine;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>   <img src="../../myblog/myblog/source/images/image-20200606171449994.png" alt="image-20200606171449994"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" data-id="ckb3fkqxx0001hgtv04zk3pbi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css/盒模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2020-03-14T05:54:43.020Z" itemprop="datePublished">2020-03-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/">css/盒模型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p>以标准盒为例</p>
+<img src="../../images/标准盒模型1.jpg" style="zoom:50%;" />
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/" data-id="ckb3fkqyb0003hgtv6m7aaeam" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css/width height" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/13/css/width%20height/" class="article-date">
   <time datetime="2020-03-13T11:30:10.477Z" itemprop="datePublished">2020-03-13</time>
 </a>
     
@@ -78,7 +224,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/13/css-width/width%20height/">css-width/width height</a>
+      <a class="article-title" href="/2020/03/13/css/width%20height/">css/width height</a>
     </h1>
   
 
@@ -140,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/13/css-width/width%20height/" data-id="ck7r6zuq60001a0tvcr7i69f7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/13/css/width%20height/" data-id="ckb3fkqyb0002hgtvcbdegw2u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -478,7 +624,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/16/todolist/todolist/" data-id="ck7r6zuq80002a0tvei3pho9a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/16/todolist/todolist/" data-id="ckb3fkqyh0004hgtv3pib25sw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -527,7 +673,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ck7r6zuph0000a0tv7f05db6j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/15/hello-world/" data-id="ckb3fkqxo0000hgtv9mzmclim" class="article-share-link">Share</a>
       
       
     </footer>
@@ -555,7 +701,7 @@ document.getElementById("add_list").onkeypress = function (envent) {
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li></ul>
     </div>
   </div>
 
@@ -568,7 +714,15 @@ document.getElementById("add_list").onkeypress = function (envent) {
       <ul>
         
           <li>
-            <a href="/2020/03/13/css-width/width%20height/">css-width/width height</a>
+            <a href="/2020/06/06/css_%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/">css_居中方式</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/14/css/%E7%9B%92%E6%A8%A1%E5%9E%8B/">css/盒模型</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/13/css/width%20height/">css/width height</a>
           </li>
         
           <li>
